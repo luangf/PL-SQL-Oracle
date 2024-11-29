@@ -19,3 +19,26 @@ CREATE TABLE customers (
 INSERT INTO customers VALUES (1, 'João Silva', 'joao@email.com', 'São Paulo');
 SELECT * FROM customers;
 ```
+3. Utilizei a linguagem PL/SQL para o objetivo do projeto:
+```
+DECLARE
+    VAR_NAME_CUSTOMER	customers.name%Type;
+
+BEGIN
+	SELECT name
+     INTO VAR_NAME_CUSTOMER
+      FROM customers
+	   WHERE id_customer=1;
+
+	IF VAR_NAME_CUSTOMER = 'João Silva' THEN
+    	DBMS_OUTPUT.PUT_LINE(VAR_NAME_CUSTOMER);
+	ELSE
+        DBMS_OUTPUT.PUT_LINE('Other name');
+	END IF;
+	-- >, <, =, <>, !=, <=, => others conditional operators
+END;
+```
+* Foi utilizado como boa prática customers.name%Type na VAR_NAME_CUSTOME ao invés de declarar o tipo direto, pois pode mudar futuramente na tabela
+* Imagem demonstrando o resultado:
+
+<img src="https://github.com/user-attachments/assets/dbb2a6c2-9ce3-407b-ac68-f5b73dea5d1f" width="400"/>
