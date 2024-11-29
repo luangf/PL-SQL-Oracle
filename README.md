@@ -8,7 +8,7 @@ Objetivo da query: Verificar se o nome do cliente de id = 1 é igual a 'João Si
 1. Criei uma tabela de clientes
 ```SQL
 CREATE TABLE customers (
-    id_customer NUMBER PRIMARY KEY,
+	id_customer NUMBER PRIMARY KEY,
     name VARCHAR2(50),
     email VARCHAR2(100),
     city VARCHAR2(50)
@@ -22,18 +22,18 @@ SELECT * FROM customers;
 3. Utilizei a linguagem PL/SQL para o objetivo do projeto:
 ```
 DECLARE
-    VAR_NAME_CUSTOMER	customers.name%Type;
+	VAR_NAME_CUSTOMER	customers.name%Type;
 
 BEGIN
 	SELECT name
-     INTO VAR_NAME_CUSTOMER
-      FROM customers
+	 INTO VAR_NAME_CUSTOMER
+	  FROM customers
 	   WHERE id_customer=1;
 
 	IF VAR_NAME_CUSTOMER = 'João Silva' THEN
-    	DBMS_OUTPUT.PUT_LINE(VAR_NAME_CUSTOMER);
+		DBMS_OUTPUT.PUT_LINE(VAR_NAME_CUSTOMER);
 	ELSE
-        DBMS_OUTPUT.PUT_LINE('Other name');
+		DBMS_OUTPUT.PUT_LINE('Other name');
 	END IF;
 	-- >, <, =, <>, !=, <=, => others conditional operators
 END;
