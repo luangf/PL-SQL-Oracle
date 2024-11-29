@@ -38,7 +38,7 @@ BEGIN
 	-- >, <, =, <>, !=, <=, => others conditional operators
 END;
 ```
-* Foi utilizado como boa prática customers.name%Type na VAR_NAME_CUSTOME ao invés de declarar o tipo direto, pois pode mudar futuramente na tabela
+* Foi utilizado como boa prática customers.name%Type na VAR_NAME_CUSTOMER ao invés de declarar o tipo direto, pois pode mudar futuramente na tabela
 * Imagem demonstrando o resultado:
 
 <img src="https://github.com/user-attachments/assets/dbb2a6c2-9ce3-407b-ac68-f5b73dea5d1f" width="400"/>
