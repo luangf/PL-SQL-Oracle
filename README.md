@@ -1,6 +1,8 @@
 # PL-SQL-Oracle
 Repository with the aim of studying and testing the PL/SQL language
 
+Esse repositorio esta "depreciado", agora tem a v2, que é esse: https://github.com/luangf/Oracle-DB-PLSQL
+
 Utilizei o software "Oracle Live SQL" que permite executar comandos SQL e PL/SQL diretamente no navegador, precisa apenas de uma conta na Oracle.
 
 Objetivo da query: Verificar se o nome do cliente de id = 1 é igual a 'João Silva' 
